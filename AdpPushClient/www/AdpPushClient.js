@@ -3,12 +3,8 @@ var exec = require('cordova/exec');
 const  bridgeName = 'AdpPushClient';
 var ChabokPush = function () {}
 
-// exports.coolMethod = function (arg0, success, error) {
-//     exec(success, error, 'AdpPushClient', 'coolMethod', [arg0]);
-// };
-
 ChabokPush.prototype.init = function (options, success, error) {
-    var params = Array.from(Object.values(options), k => k);
+    var params = Array.from(Object.values(options));
     exec(success, error, bridgeName, 'init', params);
 };
 
