@@ -1,6 +1,6 @@
 {
   "name": "io.chabok.cordovaplugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cordova wrapper for Chabok SDK",
   "cordova": {
     "id": "io.chabok.cordovaplugin",
