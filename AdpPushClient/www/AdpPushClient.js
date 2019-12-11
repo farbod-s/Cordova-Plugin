@@ -4,7 +4,12 @@ const  bridgeName = 'AdpPushClient';
 var AdpPushClient = function () {}
 
 AdpPushClient.prototype.init = function (options, success, error) {
-    var params = Array.from(Object.values(options));
+    // var params = Array.from(Object.values(options));
+    var params = [];
+    for (opt in options) {
+        params[params.length] = options[opt];
+        console.log(params[params.length - 1]);
+    }
     exec(success, error, bridgeName, 'init', params);
 };
 
