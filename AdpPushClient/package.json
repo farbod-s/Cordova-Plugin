@@ -1,0 +1,27 @@
+{
+  "name": "io.chabok.cordovaplugin",
+  "version": "1.0.0",
+  "description": "Cordova wrapper for Chabok SDK",
+  "cordova": {
+    "id": "io.chabok.cordovaplugin",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/farbod-s/Cordova-Plugin.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
+  ],
+  "author": "Farbod Samsamipour",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/farbod-s/Cordova-Plugin/issues"
+  },
+  "homepage": "https://github.com/farbod-s/Cordova-Plugin#readme"
+}
