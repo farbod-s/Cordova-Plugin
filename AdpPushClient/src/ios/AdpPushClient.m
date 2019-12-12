@@ -105,7 +105,7 @@ void failureCallback(NSString* callbackId, NSDictionary* data) {
     }
     
     BOOL state = [PushClientManager.defaultManager login:userId
-                                                       channels:@[] registrationHandler:^(BOOL isRegistered, NSString *userId, NSError *error) {
+                                                       handler:^(BOOL isRegistered, NSError *error) {
                                                            CDVPluginResult* pluginResult = nil;
 
                                                            NSLog(@"isRegistered : %d userId : %@ error : %@",isRegistered, userId, error);
@@ -337,15 +337,7 @@ void failureCallback(NSString* callbackId, NSDictionary* data) {
 
 #pragma mark - deeplink
 -(void) appWillOpenUrl:(CDVInvokedUrlCommand *) command {
-    CDVPluginResult* pluginResult = nil;
-    NSString *link = [command.arguments objectAtIndex:0];
-
-    if(!link){
-        return;
-    }
-    
-    NSURL *url = [[NSURL alloc] initWithString:link];
-    [PushClientManager.defaultManager appWillOpenUrl:url];
+    // nothing!
 }
 
 //-(void) setNotificationOpenedHandler:(CDVInvokedUrlCommand *) command {
