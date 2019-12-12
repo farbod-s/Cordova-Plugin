@@ -3,7 +3,7 @@
 var fs = require('fs');
 var path = require('path');
 
-var APP_CLASS = 'io.chabok.cordovaplugin.MyAppClass';
+var APP_CLASS = 'io.chabok.cordovaplugin.AdpPushClient.ChabokApplication';
 
 module.exports = function(context) {
   var platformRoot = path.join(context.opts.projectRoot, 'platforms/android');

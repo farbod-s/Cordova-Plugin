@@ -33,7 +33,7 @@ void failureCallback(NSString* callbackId, NSDictionary* data) {
 @property (nonatomic, retain) NSString *onConnectionStatusCallback;
 //@property (nonatomic, retain) NSString *notificationOpenedCallback;
 
--(void) setDevelopmentMode:(CDVInvokedUrlCommand *)command;
+-(void) configureEnvironment:(CDVInvokedUrlCommand *)command;
 -(void) login:(CDVInvokedUrlCommand *)command;
 -(void) logout:(CDVInvokedUrlCommand *)command;
 
@@ -61,7 +61,7 @@ void failureCallback(NSString* callbackId, NSDictionary* data) {
     NSLog(@"Starting Chabok plugin");
 }
 
--(void)setDevelopmentMode:(CDVInvokedUrlCommand*)command {
+-(void)configureEnvironment:(CDVInvokedUrlCommand*)command {
     BOOL devMode = [command.arguments objectAtIndex:0];
     NSInteger chabokEnv = devMode ? 0 : 1;
 
