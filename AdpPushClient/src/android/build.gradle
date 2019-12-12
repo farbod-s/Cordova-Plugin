@@ -1,12 +1,28 @@
-repositories{
-  jcenter()
-  flatDir {
-      dirs 'libs'
-   }
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url "https://plugins.gradle.org/m2/" 
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:+'
+        classpath 'com.google.gms:google-services:4.1.0'
+        classpath 'io.chabok.plugin:chabok-services:1.0.0'
+    }
+}
+
+repositories {
+    google()
+    jcenter()
+    flatDir {
+        dirs 'libs'
+    }
 }
 
 dependencies {
-   implementation(name:'chabok-lib-2.16.0', ext:'aar')
+    implementation(name:'chabok-lib-3.1.0', ext:'aar')
 }
 
 android {
@@ -15,3 +31,8 @@ android {
     exclude 'META-INF/LICENSE'
   }
 }
+
+cdvPluginPostBuildExtras.add({
+    apply plugin: 'com.google.gms.google-services'
+    apply plugin: 'io.chabok.plugin.chabok-services'
+})
